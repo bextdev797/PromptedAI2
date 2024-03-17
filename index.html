@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompted AI2</title>
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+    <style>
+        /* Your CSS styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        h1 {
+            color: #007bff; /* Blue color */
+        }
+        .input-box {
+            margin: 20px;
+        }
+        .result {
+            font-weight: bold;
+            color: #007bff; /* Blue color */
+        }
+        button {
+            background-color: #007bff; /* Blue color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3; /* Darker shade of blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Extension IDE Finder</h1>
+    <div class="input-box">
+        <label for="extension-input">Type your preference (basic, helper, or game):</label>
+        <input type="text" id="extension-input">
+    </div>
+    <button onclick="findExtension()">Find Extension</button>
+    <div class="result" id="extension-link"></div>
+    <div class="result" id="extension-link2"></div>
+
+    <script>
+        // Your JavaScript logic goes here
+        function findExtension() {
+            const userInput = document.getElementById("extension-input").value.toLowerCase();
+            let extensionLink;
+            let extensionLink2;
+
+            switch (userInput) {
+                case "basic":
+                    extensionLink = "https://ide.niotron.com";
+                    break;
+                case "helper":
+                    extensionLink = "https://github.com/mit-cml/appinventor-sources";
+                    extensionLink2 = "https://github.com/mit-cml/extension-template";
+                    break;
+                case "game":
+                    extensionLink = "https://github.com/shreyashsaitwal/rush-cli";
+                    break;
+                default:
+                    extensionLink = "No valid extension found.";
+                    break;
+            }
+
+            document.getElementById("extension-link").textContent = extensionLink;
+            document.getElementById("extension-link2").textContent = extensionLink2; 
+        }
+    </script>
+</body>
+</html>
