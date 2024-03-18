@@ -38,10 +38,10 @@
 <body>
     <h1>Extension IDE Finder</h1>
     <div class="input-box">
-        <label for="extension-input">Type your preference (basic, helper, or game):</label>
+        <label for="extension-input">Type your preference (basic, helper, game or app):</label>
         <input type="text" id="extension-input">
     </div>
-    <button onclick="findExtension()">Find Extension</button>
+    <button onclick="findExtensionIDE()">Find Extension IDE</button>
     <div class="result" id="extension-link"></div>
     <div class="result" id="extension-link2"></div>
 
@@ -63,6 +63,8 @@
                 case "game":
                     extensionLink = "https://github.com/shreyashsaitwal/rush-cli";
                     break;
+                case "app":
+                    extensionLink = "https://community.kodular.io/t/free-eide-extension-ide-create-your-extension-on-android/";
                 default:
                     extensionLink = "No valid extension found.";
                     break;
